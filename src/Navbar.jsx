@@ -8,6 +8,12 @@ const Navbar = () => {
   const linksRef = useRef(null);
   const linksContainerRef = useRef(null);
 
+  const linksStyle = {
+    height: showLink
+      ? `${linksRef.current.getBoundingClientRect().height}px`
+      : "0px",
+  };
+
   return (
     <nav>
       <div className="nav-center">
@@ -21,20 +27,24 @@ const Navbar = () => {
             <FaBars />
           </button>
         </div>
-        {showLink && (
-          <div className="links-container" ref={linksContainerRef}>
-            <ul className="links" ref={linksRef}>
-              {links.map((link) => {
-                const { id, url, text } = link;
-                return (
-                  <li key={id}>
-                    <a href={url}>{text}</a>
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
-        )}
+        {/* {showLink && ( */}
+        <div
+          className="links-container"
+          ref={linksContainerRef}
+          style={linksStyle}
+        >
+          <ul className="links" ref={linksRef}>
+            {links.map((link) => {
+              const { id, url, text } = link;
+              return (
+                <li key={id}>
+                  <a href={url}>{text}</a>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+        {/* )} */}
       </div>
     </nav>
   );
