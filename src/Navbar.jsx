@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { FaBars } from "react-icons/fa";
 import { links, social } from "./data";
 import logo from "./logo.svg";
 
 const Navbar = () => {
   const [showLink, setShowLink] = useState(false);
+  const linksRef = useRef(null);
+  const linksContainerRef = useRef(null);
 
   return (
     <nav>
@@ -20,8 +22,8 @@ const Navbar = () => {
           </button>
         </div>
         {showLink && (
-          <div className="links-container">
-            <ul className="links">
+          <div className="links-container" ref={linksContainerRef}>
+            <ul className="links" ref={linksRef}>
               {links.map((link) => {
                 const { id, url, text } = link;
                 return (
