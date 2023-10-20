@@ -77,3 +77,8 @@ nav {
   color: #49a6e9;
   padding-left: 1.5rem;
 }
+
+.links-container {
+  overflow: hidden;
+  transition: 0.3s ease-in-out all;
+}
