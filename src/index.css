@@ -1,0 +1,79 @@
+/* ============= GLOBAL CSS =============== */
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+} /*16px*/
+
+body {
+  background: #f8fafc;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+  line-height: 1;
+  color: #0f172a;
+}
+
+a {
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+
+/* ============= PROJECT CSS =============== */
+nav {
+  background: #fff;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1),
+    0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.nav-toggle {
+  font-size: 1.5rem;
+  color: #49a6e9;
+  background: transparent;
+  border-color: transparent;
+  transition: 0.3s ease-in-out all;
+  cursor: pointer;
+}
+
+.nav-toggle:hover {
+  color: #1a6aa2;
+  transform: rotate(90deg);
+}
+
+.logo {
+  height: 40px;
+}
+
+.links a {
+  color: #334155;
+  font-size: 1rem;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  display: block;
+  padding: 0.5rem 1rem;
+  transition: 0.3s ease-in-out all;
+}
+
+.links a:hover {
+  background: #c5e5fc;
+  color: #49a6e9;
+  padding-left: 1.5rem;
+}
