@@ -82,3 +82,58 @@ nav {
   overflow: hidden;
   transition: 0.3s ease-in-out all;
 }
+
+.social-icons {
+  display: none;
+}
+
+@media screen and (min-width: 800px) {
+  .nav-center {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+
+  .nav-header {
+    padding: 0;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+
+  .links-container {
+    height: auto !important;
+  }
+
+  .links {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .links a {
+    padding: 0;
+  }
+
+  .links a:hover {
+    padding: 0;
+    background: transparent;
+  }
+
+  .social-icons {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .social-icons a {
+    color: #49a6e9;
+    transition: 0.3s ease-in-out all;
+  }
+
+  .social-icons a:hover {
+    color: #8bcbf9;
+  }
+}
